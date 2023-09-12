@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@winglang/wingsdk": "^0.2.199"
+  }
+}
