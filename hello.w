@@ -1,10 +1,11 @@
 bring cloud;
 
+let api = new cloud.Api();
 let bucket = new cloud.Bucket();
 let queue = new cloud.Queue();
+let counter = new cloud.Counter();
 
-inflight handler(message: str): str {
-    bucket.put("wing.txt", "Hello, ${message}");
-}
-
-queue.on_message(handler);
+api.post("/add", inflight (req) =>{
+  queue.push("Give am 1");
+   return cloud.ApiResponse{status: 201};
+});
